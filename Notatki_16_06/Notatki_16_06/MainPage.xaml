@@ -9,18 +9,31 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <ListView Grid.Row="0" x:Name="notatkiListView" ItemSelected="notatkiListView_ItemSelected">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding tytul}" Detail="{Binding tresc}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <!-- GÓRNY -->
+        <VerticalStackLayout Grid.Row="0">
+            <Label Text="Notatka" TextColor="#0000CD" FontSize="24" Margin="10"/>
 
-        <VerticalStackLayout Grid.Row="1">
+            <ListView x:Name="notatkiListView" ItemSelected="notatkiListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding tytul}" Detail="{Binding tresc}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+
+        <!-- DOLNY -->
+        <VerticalStackLayout Grid.Row="1" Margin="10">
+            <Label Text="Dodawanie notatki" TextColor="#0000CD" FontSize="20" />
+
+            <Label Text="Wpisz tytuł: " />
             <Entry x:Name="tytulEntry" Placeholder="Podaj tytuł notatki" />
+
+            <Label Text="Wpisz treść: " />
             <Entry x:Name="trescEntry" Placeholder="Podaj treść notatki" />
-            <Button x:Name="DodajNotatkeButton" Clicked="DodajNotatkeButton_Clicked" Text="Dodaj notatkę" />
+
+            <Button x:Name="DodajNotatkeButton" Clicked="DodajNotatkeButton_Clicked"
+                    Text="DODAJ" TextColor="#0000CD" />
         </VerticalStackLayout>
     </Grid>
 

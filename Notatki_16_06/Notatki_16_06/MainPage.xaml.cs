@@ -11,8 +11,6 @@ namespace Notatki_16_06
             notatkiListView.ItemsSource = notatki;
             BindingContext = this;
             notatki.Add(new Notatka("notatka1", "treść1"));
-            notatki.Add(new Notatka("notatka2", "treść2"));
-            notatki.Add(new Notatka("notatka3", "treść3"));
         }
 
         private void DodajNotatkeButton_Clicked(object sender, EventArgs e)
@@ -39,7 +37,6 @@ namespace Notatki_16_06
                     DisplayAlert(n.tytul, n.tresc, "OK");
                 }
             }
-
         }
     }
     public class Notatka
