@@ -35,8 +35,13 @@ namespace Notatki_16_06
                 if (notatkiListView.SelectedItem == n)
                 {
                     DisplayAlert(n.tytul, n.tresc, "OK");
+
+                    //lub ustawia prioryteet na false/true
+                    //n.priorytet = false/true
                 }
             }
+            
+
         }
     }
     public class Notatka
